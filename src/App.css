@@ -1,0 +1,103 @@
+:root {
+  --bg: #0a0a0a;
+  --card: #121212;
+  --border: #222;
+  --accent: #4caf50;
+}
+
+body {
+  background: var(--bg);
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  overflow: hidden;
+}
+
+.duit {
+  position: absolute;
+  width: 130px;
+  cursor: pointer;
+  z-index: 1;
+  transition: opacity 0.2s ease;
+  filter: drop-shadow(0 0 10px rgba(0,0,0,0.8));
+}
+
+.duit:hover {
+  filter: brightness(1.2) drop-shadow(0 0 15px var(--accent));
+}
+
+/*Kotak tengah*/
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.gacha-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 2rem;
+  border-radius: 20px;
+  width: 300px;
+  text-align: center;
+  z-index: 10;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.7);
+}
+
+.uang { margin-bottom: 20px; color: #888; font-size: 1.1rem; }
+.uang span { color: var(--accent); font-weight: bold; }
+
+.display-box {
+  height: 90px;
+  background: #000;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.roll-btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: #fff;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+.roll-btn:active { transform: scale(0.98); }
+
+/*inventory*/
+.inventory-section { margin-top: 25px; text-align: left; }
+.inventory-section h3 { font-size: 0.8rem; color: #444; text-transform: uppercase; }
+
+.inventory-list {
+  max-height: 120px;
+  overflow-y: auto;
+  border-radius: 8px;
+  scrollbar-width: thin;
+  scrollbar-color: #333 #111;
+}
+
+.inv-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #1a1a1a;
+  font-size: 0.9rem;
+}
+
+.del-btn {
+  background: none;
+  border: none;
+  color: #444;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+.del-btn:hover { color: #ff5555; }
